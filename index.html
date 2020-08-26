@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bilan Météo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bilan météo du club nautique de rohu">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/Chart.min.js"></script>
+  <script src="js/script.min.js"></script>
+</head>
+
+<body>
+  <div id="report">
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__title">BILAN MÉTÉO DU CLUB NAUTIQUE DU ROHU</h1>
+        <h2 class="header__subtitle">Données réelles du <span id="timedata"></span></h2>
+      </div>
+    </header>
+    <div class="components">
+      <div class="components__row components__row--2-1">
+        <div class="component component--blue component--big">
+          <header class="component__title">
+            <span>HAUTEUR DES VAGUES </span>
+          </header>
+          <div class="component__main"><span class="txt-large wave-height" id="waveHeight"></span>
+            <ul class="column-breakdown column-breakdown--tide" id="waveHeightTimes">
+            </ul>
+          </div>
+        </div>
+        <div class="component component--blue component--small">
+          <header class="component__title">
+            <span>DIRECTION DE LA HOULE</span>
+          </header>
+          <div class="component__main"><span class="txt-large" id="swellDirection"></span></div>
+        </div>
+      </div>
+      <div class="components__row components__row--2-1">
+        <div class="component component--blue component--small">
+          <header class="component__title">
+            <span>VENT MOYEN</span>
+          </header>
+          <div class="component__main"><span class="txt-large" id="windSpeed"></span><span id="windDirection"></span>
+          </div>
+        </div>
+        <div class="component component--blue component--big">
+          <header class="component__title">
+            <span>MARÉE</span>
+          </header>
+          <div class="component__main">
+            <canvas id="tidePrevision" width="400" height="200"></canvas>
+            <ul class="column-breakdown column-breakdown--tide" id="tideExtreme">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="components__row components__row--2-1">
+        <div class="component component--blue component--big">
+          <header class="component__title">
+            <span>VENT</span>
+          </header>
+          <div class="component__main">
+            <canvas id="windPrevision" width="400" height="200"></canvas>
+            <ul class="column-breakdown column-breakdown--tide" id="windSpeedTime">
+            </ul>
+          </div>
+        </div>
+        <div class="component component--blue component--small">
+          <header class="component__title">
+            <span>TEMPERATURE MINIMUM / MAXIMUM</span>
+          </header>
+          <div class="component__main"><span class="txt-large" id="airTemperature"></span><span>celsius</span></div>
+        </div>
+      </div>
+      <div class="components__row components__row--2-1">
+        <div class="component component--blue component--small">
+          <header class="component__title">
+            <span>COUCHER DE SOLEIL / LEVER DE SOLEIL</span>
+          </header>
+          <div class="component__main"><span class="txt-medium" id="astronomy"></span></div>
+        </div>
+        <div class="component component--blue component--big">
+          <header class="component__title">
+            <span>TEMPERATURE</span>
+          </header>
+          <div class="component__main">
+            <canvas id="TemperaturePrevision" width="400" height="200"></canvas>
+            <ul class="column-breakdown column-breakdown--tide" id="TemperaturTime">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="components__row components__row--1-2">
+        <div class="component component--blue component--small">
+          <header class="component__title">
+            <span>COUVERTURE NUAGEUSE</span>
+          </header>
+          <div class="component__main"><span class="txt-medium" id="cloudCover"></span></div>
+        </div>
+        <div class="component component--blue component--small">
+          <header class="component__title">
+            <span>HUMIDITÉ</span>
+          </header>
+          <div class="component__main"><span class="txt-medium" id="humidity"></span></div>
+        </div>
+        <div class="component component--blue component--small">
+          <header class="component__title">
+            <span>PRÉCIPITATION</span>
+          </header>
+          <div class="component__main"><span class="txt-medium" id="precipitation"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
